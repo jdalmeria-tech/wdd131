@@ -35,6 +35,7 @@ body {
 nav {
   grid-area: header;
   background-color: black;
+  color: #eee;
   margin-top: 5rem; /* margin-top: 3rem */
   padding: 1rem;
 }
@@ -54,6 +55,7 @@ nav {
 
 .navigation a {
   display: block;
+  background-color: black;
   color: #eee;
   padding: 0.75rem;
   text-decoration: none;
@@ -69,12 +71,14 @@ nav {
 .main {
   grid-area: main;
   background-color: #ccc;
+  color: black;
   padding: 1rem;
 }
 
 .aside {
   grid-area: aside;
   background-color: white;
+  color: black;
   padding: 1rem;
 }
 
