@@ -11,11 +11,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 500px;
   grid-template-areas:
     "header header"
-    "nav nav"
     "main aside" 
     "footer footer";
   min-height: 100vh;
@@ -25,14 +24,18 @@ body {
   grid-area: header;
   background-color: #333;
   color: white;
-  padding: 1rem;
+  padding: 0;
   text-align: left;
 }
 
+.header-content {
+  padding: 1rem;
+}
+
 nav {
-  grid-area: nav;
+  grid-area: header;
   background-color: black;
-  margin: 0; /* margin-top: 3rem */
+  margin-top: 5rem; /* margin-top: 3rem */
   padding: 1rem;
 }
 
@@ -42,6 +45,7 @@ nav {
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .navigation li {
