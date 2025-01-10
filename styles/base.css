@@ -117,6 +117,10 @@ main {
   padding: 1rem;
 }
 
+.multiple-text {
+  color: var(--accent-color);
+}
+
 .content-first p {
   flex: 1;
   margin-right: 1rem;
