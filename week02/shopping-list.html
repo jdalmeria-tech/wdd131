@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button id="addButton">Add item</button>
+    </div>
+
+    <ul id="shoppingList">
+
+    </ul>
+
+    <script>
+      const list = document.querySelector('#shoppingList');
+      const input = document.querySelector('#item');
+      const button = document.querySelector('#addButton');
+
+      function addItem() {
+        // get the value of the input field
+        const itemText = input.value;
+
+        // clear the input field
+        input.value = '';
+
+        // create 3 new elements, <li>, <span>, and <button> and store them in variables
+        const listItem = document.createElement('li');
+        const span = document.createElement('span');
+        const deleteButton = document.createElement('button');
+
+        // Append the span and the button as children of the list item
+        listItem.appendChild(span);
+        listItem.appendChild(deleteButton);
+
+        // Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'
+        span.textContent = itemText;
+        deleteButton.textContent = 'Delete';
+
+        // Append the list item as a child of the list
+        list.appendChild(listItem);
+
+        // Attach an event handler to the delete button so that, when clicked, it will delete the entire list item
+        deleteButton.addEventListener('click', function() {
+          list.removeChild(listItem);
+        });
+
+        // Use the focus() method to focus the input element ready for entering the next shopping list item
+        input.focus();
+      }
+
+      // Attach an event listener to the button to call the function when clicked
+      button.addEventListener('click', addItem);
+    </script>
+  </body>
+</html>
