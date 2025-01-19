@@ -60,9 +60,11 @@ body {
   transform: scale(1.05);
 }
 
-/* small view navigation */
+/* mobile view navigation */
 #menu {
   font-size: 1.5rem;
+  font-weight: 700;
+  padding: .5rem .75rem;
   border: 0;
   background: none;
   color: var(--bg-color);
@@ -70,7 +72,7 @@ body {
   top: 1rem;
   right: 1rem;
   cursor: pointer;
-  display: block; /* Ensure it is displayed by default */
+  display: block;
 }
 
 #menu::before {
@@ -87,10 +89,10 @@ body {
 
 .navbar.open {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Display links vertically */
   position: absolute;
   top: 5rem;
-  right: 2rem;
+  right: 0;
   background-color: var(--main-color);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -98,14 +100,17 @@ body {
 
 .navigation {
   display: flex;
+  flex-direction: column; /* Ensure vertical layout */
   list-style: none;
   padding: 0;
 }
 
 .navbar a {
-  font-size: 1.9rem;
+  display: block;
+  text-align: left;
+  font-size: clamp(1rem, 2vmin, 1.5rem);
   color: var(--bg-color);
-  margin-left: 1rem;
+  margin: 1rem 0; /* Adjust margin for vertical layout */
   font-weight: 700;
   transition: 0.3s ease;
   padding: 0.5rem;
@@ -118,6 +123,10 @@ body {
   color: var(--text-color);
 }
 
+.navigation li {
+  margin: 0.1rem;
+}
+
 /* Main section */
 
 main {
@@ -128,10 +137,32 @@ main {
   gap: 1rem;
   padding: 2rem;
   margin-top: 5rem; /* Adjust for fixed header */
+  text-align: center; /* Center the text */
+}
+
+h1 {
+  grid-column: 1 / -1; /* Span all columns */
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 figure {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 300px; /* Adjust the image size */
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
 /* Footer section */
@@ -148,21 +179,46 @@ footer {
 }
 
 @media (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   #menu {
     display: none; /* Hide menu button on larger screens */
   }
 
   .navbar {
     display: flex; /* Show navbar on larger screens */
-    flex-direction: row;
+    flex-direction: row; /* Change to row direction */
     position: static;
     background-color: transparent;
     padding: 0;
+    width: auto; /* Reset width */
+    height: auto; /* Reset height */
+  }
+
+  .navbar.open {
+    right: 0; /* Reset position */
+  }
+
+  .navigation {
+    flex-direction: row; /* Ensure horizontal layout */
+  }
+
+  .navigation li {
+    display: block; /* change state in small view */
+    flex: 1 1 auto;
   }
 
   .navbar a {
     margin-left: 5rem;
     margin: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
