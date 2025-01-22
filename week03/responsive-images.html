@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images</title>
+  <meta name="description" content="this will showcase responsive images">
+  <meta name="author" content="Joseph Almeria">
+  <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+  <header><h1>Responsive Images</h1> <nav></nav></header>
+    <main>
+      <div class="hero">
+        <picture>
+          <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+          <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+          <img src="images/hero-small.webp" alt="an image of Laie Hawaii Temple" width="500" height="250">
+        </picture>
+      </div>
+    </main>
+  <footer>©Joseph Almeria | BYU-Idaho | WDD 131 - 2025</footer>
+</body>
+</html>
