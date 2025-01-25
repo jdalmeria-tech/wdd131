@@ -1,0 +1,99 @@
+:root {
+  --main-color: #0d0c0c;
+  --secondary-color: #fcd116;
+  --accent-color: #5db0fd;
+  --text-color: #f1efed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto" , sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* header section  */
+
+header {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+h1 {
+  font-weight: 500;
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-color);
+}
+
+.yellow {
+  background-color: var(--secondary-color);
+  padding: 0.7rem;
+}
+
+/* main section  */
+.container {
+  display: flex;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.data, .weather {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.data {
+  left: 1rem; /* the left position */
+  top: 45%; /* the top position */
+  transform: translateY(-45%); /* the vertical alignment */
+}
+
+.weather {
+  right: 1rem;
+  top: 45%; /* the top position */
+  transform: translateY(-45%); /* the vertical alignment */
+}
+
+ul span {
+  font-weight: bold;
+}
+
+ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1.5rem;
+}
+
