@@ -58,6 +58,12 @@ h1 {
   object-fit: cover;
 }
 
+h2 {
+  background-color: var(--accent-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 .data, .weather {
   position: absolute;
   top: 50%;
@@ -69,15 +75,15 @@ h1 {
 }
 
 .data {
-  left: 1rem; /* the left position */
+  left: 1.5rem; /* the left position */
   top: 45%; /* the top position */
-  transform: translateY(-45%); /* the vertical alignment */
+  transform: translateY(-80%); /* the vertical alignment */
 }
 
 .weather {
-  right: 1rem;
+  right: 3.5rem;
   top: 45%; /* the top position */
-  transform: translateY(-45%); /* the vertical alignment */
+  transform: translateY(-5%); /* the vertical alignment */
 }
 
 ul span {
