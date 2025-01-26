@@ -114,6 +114,14 @@ ul li {
   padding: var(--padding-small);
 }
 
+.weather ul li span:first-child {
+  font-weight: bold;
+}
+
+.weather ul li span:last-child {
+  font-weight: normal;
+}
+
 /* Footer Section */
 footer {
   background-color: var(--main-color);
@@ -136,7 +144,7 @@ footer {
     position: static;
     transform: none;
     width: 100%;
-    padding: var(--padding-small);
+    padding: var(--padding-large);
     text-align: center;
     background-color: transparent;
     border-bottom: none;
