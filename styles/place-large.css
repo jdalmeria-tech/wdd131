@@ -1,0 +1,18 @@
+@media (max-width: 1000px) {
+  .data, .weather {
+    padding: var(--padding-small);
+  }
+}
+
+
+@media (min-width: 551px) {
+  .title-card {
+    display: flex;
+    background-color: var(--accent-color);
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius);
+    color: var (--text-color);
+    text-align: left;
+    letter-spacing: 0.2rem;
+  }
+}
