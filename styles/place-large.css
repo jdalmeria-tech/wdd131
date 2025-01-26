@@ -1,18 +1,46 @@
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   .data, .weather {
     padding: var(--padding-small);
   }
 }
 
-
-@media (min-width: 551px) {
+@media (min-width: 1320px) {
   .title-card {
     display: flex;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     padding: var(--padding-medium);
     border-radius: var(--border-radius);
-    color: var (--text-color);
+    color: var(--text-color);
     text-align: left;
     letter-spacing: 0.2rem;
   }
 }
+
+@media (min-width: 551px) and (max-width: 1319px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--padding-medium);
+  }
+
+  .hero {
+    grid-column: span 2; /* Span two columns */
+  }
+
+  .data {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .weather {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  footer {
+    grid-column: span 2; /* Span two columns */
+    grid-row: 3;
+  }
+}
+
