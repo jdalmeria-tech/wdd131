@@ -4,7 +4,7 @@
   }
 }
 
-@media (min-width: 1320px) {
+@media (min-width: 1331px) {
   .title-card {
     display: flex;
     background-color: var(--secondary-color);
@@ -16,31 +16,4 @@
   }
 }
 
-@media (min-width: 551px) and (max-width: 1319px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    gap: var(--padding-medium);
-  }
-
-  .hero {
-    grid-column: span 2; /* Span two columns */
-  }
-
-  .data {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .weather {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  footer {
-    grid-column: span 2; /* Span two columns */
-    grid-row: 3;
-  }
-}
 

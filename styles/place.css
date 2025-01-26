@@ -176,3 +176,52 @@ footer {
   }
 }
 
+/* Medium view */
+
+@media (min-width: 551px) and (max-width: 1330px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--padding-medium);
+    position: relative; 
+  }
+
+  .hero {
+    grid-column: span 2; 
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .data, .weather {
+    position: static; 
+    top: auto;
+    transform: none;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    padding: var(--padding-medium);
+    border-radius: 0;
+  }
+
+  .data {
+    grid-column: 1;
+    grid-row: 2;
+    border-top: solid 8px var(--secondary-color);
+    border-bottom: solid 8px var(--main-color);
+  }
+
+  .weather {
+    grid-column: 2;
+    grid-row: 2;
+    border-bottom: solid 8px var(--secondary-color);
+    border-top: solid 8px var(--main-color);
+  }
+
+  footer {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+}
+
