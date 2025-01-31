@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Load Demonstration</title>
+  <meta name="description" content="this page demonstrates lazy loading images">
+  <meta name="author" content="Joseph Almeria">
+  <link rel="stylesheet" href="styles/lazyload.css">
+  <script src="scripts/lazyload.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Lazy Load Demonstration</h1>
+    <nav></nav>
+  </header>
+  <main>
+    <picture>
+      <img src="images/pup1.webp" alt="cute white pup" loading="lazy" width="400" height="600">
+    </picture>
+
+    <picture>
+      <img src="images/pup2.webp" alt="cute chihuahua" loading="lazy">
+    </picture>
+
+    <picture>
+      <img src="images/pup3.webp" alt="smiling pup" loading="lazy">
+    </picture>
+
+    <picture>
+      <img src="images/pup4.webp" alt="side eye pup" loading="lazy">
+    </picture>
+
+    <picture>
+      <img src="images/pup5.webp" alt="furry brown pup" loading="lazy">
+    </picture>
+
+    <picture>
+      <img src="images/pup6.webp" alt="cute furry brown and white  pup" loading="lazy">
+    </picture>
+  </main>
+  <footer class="footer">
+    <p>©<span id="currentyear"></span> 🧙🏼‍♂️Joseph Almeria 🧙🏼‍♂️ Philippines</p>
+    <p><span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
