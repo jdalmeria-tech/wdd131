@@ -18,26 +18,20 @@ const aCourse = {
       instructor: "Sis A",
     },
   ],
-  enrollStudent: function (sectionNum) {
-    // find the right section...Array.findIndex will work here
+  updateEnrollment: function (sectionNum, add = true) {
+    // find the right section, we will use the findIndex method
     const sectionIndex = this.sections.findIndex(
       (section) => section.sectionNum == sectionNum
     );
-    if (sectionIndex >= 0) {
-      this.sections[sectionIndex].enrolled++;
+    if (sectionIndex >=0) {
+      if (add) {
+        this.sections[sectionIndex].enrolled++;
+      } else {
+        this.sections[sectionIndex].enrolled--;
+      }
       renderSections(this.sections);
     }
-  },
-  dropStudent: function (sectionNum) {
-    // find the right section...Array.findIndex will work here
-    const sectionIndex = this.sections.findIndex(
-      (section) => section.sectionNum == sectionNum
-    );
-    if (sectionIndex >= 0) {
-      this.sections[sectionIndex].enrolled--;
-      renderSections(this.sections);
-    }
-  },
+  }
 };
 
 function setCourseInfo(course) {
@@ -61,11 +55,11 @@ function renderSections(sections) {
 
 document.querySelector("#enrollStudent").addEventListener("click", function () {
   const sectionNum = document.querySelector("#sectionNumber").value;
-  aCourse.enrollStudent(sectionNum);
+  aCourse.updateEnrollment(sectionNum, true); // Call updateEnrollment with add = true
 });
 document.querySelector("#dropStudent").addEventListener("click", function () {
   const sectionNum = document.querySelector("#sectionNumber").value;
-  aCourse.dropStudent(sectionNum);
+  aCourse.updateEnrollment(sectionNum, false); // Call updateEnrollment with add = false
 });
 
 setCourseInfo(aCourse);
