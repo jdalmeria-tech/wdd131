@@ -133,7 +133,7 @@ h1 {
 
 /* Main section */
 
-main {
+.res-grid {
   grid-row: 2;
   grid-column: 1;
   display: grid;
@@ -186,6 +186,10 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .res-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   #menu {
     display: none; /* Hide menu button on larger screens */
   }
@@ -221,6 +225,10 @@ footer {
 
 @media (min-width: 900px) {
   main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .res-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
