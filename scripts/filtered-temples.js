@@ -1,11 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuButton = document.getElementById('menu');
   const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.navbar a');
+  const pageTitle = document.getElementById('pageTitle');
 
   menuButton.addEventListener('click', function() {
     navbar.classList.toggle('open');
     menuButton.classList.toggle('open');
   });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      filterTemples(filter);
+      updateActiveClass(this);
+      updatePageTitle(filter);
+    });
+  });
+
+  createTempleCard(temples);
 });
 
 const temples = [
@@ -92,10 +105,11 @@ const temples = [
   },
 ];
 
-createTempleCard();
+function createTempleCard(filteredTemples) {
+  const resGrid = document.querySelector('.res-grid');
+  resGrid.innerHTML = ''; // Clear existing content
 
-function createTempleCard() {
-  temples.forEach((temple) => {
+  filteredTemples.forEach((temple) => {
     let card = document.createElement('section');
     let name = document.createElement('h3');
     let location = document.createElement('p');
@@ -119,6 +133,57 @@ function createTempleCard() {
     card.appendChild(area);
     card.appendChild(img);
 
-    document.querySelector('.res-grid').appendChild(card);
+    resGrid.appendChild(card);
   });
+}
+
+function filterTemples(criteria) {
+  let filteredTemples;
+
+  switch (criteria) {
+    case 'old':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+      break;
+    case 'new':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+      break;
+    case 'large':
+      filteredTemples = temples.filter(temple => temple.area > 90000);
+      break;
+    case 'small':
+      filteredTemples = temples.filter(temple => temple.area < 10000);
+      break;
+    default:
+      filteredTemples = temples;
+  }
+
+  createTempleCard(filteredTemples);
+}
+
+function updateActiveClass(activeLink) {
+  const navLinks = document.querySelectorAll('.navbar a');
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+  });
+  activeLink.classList.add('active');
+}
+// this changes the active class, helps users know which page they are in
+function updatePageTitle(filter) {
+  const pageTitle = document.getElementById('pageTitle');
+  switch (filter) {
+    case 'old':
+      pageTitle.textContent = 'Old Temples';
+      break;
+    case 'new':
+      pageTitle.textContent = 'New Temples';
+      break;
+    case 'large':
+      pageTitle.textContent = 'Large Temples';
+      break;
+    case 'small':
+      pageTitle.textContent = 'Small Temples';
+      break;
+    default:
+      pageTitle.textContent = 'Home';
+  }
 }
