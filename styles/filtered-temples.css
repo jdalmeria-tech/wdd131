@@ -158,9 +158,8 @@ figure {
 }
 
 figure img {
-  width: 100%;
-  max-width: 300px; /* Adjust the image size */
-  height: auto;
+  width: 400px;
+  height: 250px;
   border-radius: 0.5rem;
 }
 
