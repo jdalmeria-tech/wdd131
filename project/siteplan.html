@@ -8,16 +8,68 @@
   <meta name="author" content="Joseph Almeria">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/siteplan.css">
-  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333333;
+      background-color: #F5F5F5;
+      margin: 0 10%;
+    }
+    header {
+      background-color: #1B4080;
+      color: #ffffff;
+      padding: 1em;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    footer {
+      padding: 1em;
+      background-color: #1B4080;
+      color: #ffffff;
+      text-align: center;
+    }
+    section {
+      margin: 2em 0;
+    }
+    h1, h2, h3 {
+      font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>Site Plan</h1>
-    <nav></nav>
+  <header>
+    <h1>Site Plan</h1>
+    <nav>
+      <ul>
+        <li><a href="#site-name">Site Name</a></li>
+        <li><a href="#site-purpose">Site Purpose</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#color-schema">Color Schema</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#wireframe">Wireframe</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <section>
+    <section id="site-name">
       <h2>Site Name</h2>
       <h3>AGWWAS</h3>
       <p>
@@ -26,34 +78,51 @@
       </p>
       <br>
       <p>Optional domain availability: agwwas.org</p>
-
     </section>
 
-    <section>
+    <section id="site-purpose">
       <h2>Site Purpose</h2>
       <p>
         For the organization to have a platform to present and discuss their campaigns and advocacies which center on the perspective of the workers on water management, environment protection, quality public services, putting people over profit, among others.
       </p>
     </section>
 
-    <section>
+    <section id="scenarios">
       <h2>Scenarios</h2>
-
+      <ul>
+        <li>
+          What are the current issues or challenges workers face in water management, and how can I get involved in advocating for solutions?
+        </li>
+        <li>
+          How does privatization of water services affect the quality and accessibility of clean water for communities?
+        </li>
+        <li>
+          How can I donate or collaborate with your organization to further your mission of putting people over profit?
+        </li>
+      </ul>
     </section>
 
-    <section>
+    <section id="color-schema">
       <h2>Color Schema</h2>
+      <p>Primary: #1B4080</p>
+      <p>Secondary: #40C4C0</p>
+      <p>Accent: #D71920</p>
+      <p>Neutral: #F5F5F5</p>
+      <p>Text: #333333</p>
+      <p>Text-light: #ffffff</p>
     </section>
 
-    <section>
+    <section id="typography">
       <h2>Typography</h2>
       <p>For headings: Baloo Bhaijaan 2</p>
       <p>For body: Roboto</p>
       <p>For links: Poppins</p>
+      <img src="images/sampleWebPage.webp" alt="sample page with typography">
     </section>
 
-    <section>
+    <section id="wireframe">
       <h2>Wireframe</h2>
+      <img src="images/wireframe.png" alt="Wireframe of the site">
     </section>
   </main>
   <footer>©Joseph Almeria | BYU-Idaho | WDD 131 - 2025</footer>
