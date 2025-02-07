@@ -86,13 +86,14 @@ nav a:hover {
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
+    font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .hero button:hover {
-    background-color: #FDD835;
+    background-color: var(--text-color-light);
     color: var(--accent-color);
     font-weight: bolder;
 }
