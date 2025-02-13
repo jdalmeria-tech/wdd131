@@ -28,11 +28,11 @@
 
       <fieldset>
         <div class="overall-rating">Overall Rating</div>
-        <label><input type="radio" id="five-stars" name="rating" value="five-stars" required>&star; &star; &star; &star; &star;</label>
-        <label><input type="radio" id="four-stars" name="rating" value="four-stars" required>&star; &star; &star; &star;</label>
-        <label><input type="radio" id="three-stars" name="rating" value="three-stars" required>&star; &star; &star;</label>
-        <label><input type="radio" id="two-stars" name="rating" value="two-stars" required>&star; &star;</label>
-        <label><input type="radio" id="one-star" name="rating" value="one-star" required>&star;</label>    
+        <label><input type="radio" id="five-stars" name="rating" value="Excellent" required>&star; &star; &star; &star; &star;</label>
+        <label><input type="radio" id="four-stars" name="rating" value="Great" required>&star; &star; &star; &star;</label>
+        <label><input type="radio" id="three-stars" name="rating" value="Good" required>&star; &star; &star;</label>
+        <label><input type="radio" id="two-stars" name="rating" value="Fair" required>&star; &star;</label>
+        <label><input type="radio" id="one-star" name="rating" value="Poor" required>&star;</label>    
 
         <div class="date-install">Date of Installation</div>
         <label><input type="date" id="completeDate" name="completeDate" required></label>
@@ -41,10 +41,10 @@
           Which features did you find useful in the product? <br>
           <i>(Check all that apply)</i>
         </div>
-        <label><input type="checkbox" id="durable" name="durable" value="yes">Durability</label>
-        <label><input type="checkbox" id="user-friendly" name="user-friendly" value="yes">Ease of use</label>
-        <label><input type="checkbox" id="performance" name="performance" value="yes">Performance</label>
-        <label><input type="checkbox" id="design" name="design" value="yes">Design</label>          
+        <label><input type="checkbox" name="features[]" value="Durability">Durability</label>
+        <label><input type="checkbox" name="features[]" value="Ease of use">Ease of use</label>
+        <label><input type="checkbox" name="features[]" value="Performance">Performance</label>
+        <label><input type="checkbox" name="features[]" value="Design">Design</label>         
       </fieldset>
 
       <fieldset>
