@@ -29,10 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectElement = document.getElementById('products');
 
-  products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.name;
-    option.textContent = product.name;
-    selectElement.appendChild(option);
-  });
+  if (selectElement) {
+    products.forEach(product => {
+      const option = document.createElement('option');
+      option.value = product.name;
+      option.textContent = product.name;
+      selectElement.appendChild(option);
+    });
+  } else {
+    console.error('Select element with ID "products" not found.');
+  }
 });

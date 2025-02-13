@@ -1,0 +1,6 @@
+/* Large screens */
+@media (min-width: 1025px) {
+  main {
+      width: 75%;
+  }
+}
