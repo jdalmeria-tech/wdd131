@@ -20,13 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     return params;
   }
 
+  // Function to format the date
+  function formatDate(dateString) {
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-GB', options).replace(/ /g, ' ');
+  }
+
   // Get query parameters
   const queryParams = getQueryParams();
 
   // Populate the review confirmation page with the query parameters
   document.getElementById('product').textContent = queryParams['products'] || 'N/A';
   document.getElementById('rating').textContent = queryParams['rating'] || 'N/A';
-  document.getElementById('completeDate').textContent = queryParams['completeDate'] || 'N/A';
+  document.getElementById('completeDate').textContent = queryParams['completeDate'] ? formatDate(queryParams['completeDate']) : 'N/A';
   document.getElementById('features').textContent = Array.isArray(queryParams['features[]']) ? queryParams['features[]'].join(', ') : queryParams['features[]'] || 'N/A';
   document.getElementById('review').textContent = queryParams['review'] || 'N/A';
   document.getElementById('user-name').textContent = queryParams['user-name'] || 'N/A';
