@@ -1,15 +1,40 @@
+:root {
+  --main-font-family: "Inter", sans-serif;
+  --main-font-size: 1.2rem;
+  --background-color: #F1F5FC;
+  --text-color: #333;
+  --header-background-color: #7183CB;
+  --header-text-color: white;
+  --main-width: 90%;
+  --main-max-width: 600px;
+  --main-background: white;
+  --main-padding: 20px;
+  --main-border-radius: 8px;
+  --main-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --input-border: 1px solid #ccc;
+  --input-border-radius: 4px;
+  --input-padding: 1rem;
+  --input-font-size: 1rem;
+  --submit-background-color: #5FD5E9;
+  --submit-text-color: #08090c;
+  --submit-hover-background-color: #08090c;
+  --submit-hover-text-color: #5FD5E9;
+  --footer-background-color: #7183CB;
+  --footer-text-color: white;
+}
+
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem;
-  background-color: #F1F5FC;
-  color: #333;
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #7183CB;
-  color: white;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
   text-align: center;
   padding: 20px 0;
   font-size: 1.5rem;
@@ -17,13 +42,13 @@ header {
 }
 
 main {
-  width: 90%;
-  max-width: 600px;
+  width: var(--main-width);
+  max-width: var(--main-max-width);
   margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--main-background);
+  padding: var(--main-padding);
+  border-radius: var(--main-border-radius);
+  box-shadow: var(--main-box-shadow);
 }
 
 fieldset {
@@ -38,7 +63,7 @@ fieldset {
 
 i {
   font-size: medium;
-  color: #7183CB;
+  color: var(--header-background-color);
 }
 
 label {
@@ -48,11 +73,11 @@ label {
 
 input, select, textarea {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: var(--input-padding);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--input-font-size);
 }
 
 textarea {
@@ -67,22 +92,22 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 input[type="submit"] {
-  background-color: #5FD5E9;
-  color: #08090c;
+  background-color: var(--submit-background-color);
+  color: var(--submit-text-color);
   border: none;
   padding: 10px;
   font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--input-border-radius);
   width: 100%;
   margin: 0;
 }
 
 input[type="submit"]:hover {
-  background-color: #08090c;
-  color: #5FD5E9;
+  background-color: var(--submit-hover-background-color);
+  color: var(--submit-hover-text-color);
 }
 
 .footer {
@@ -90,8 +115,8 @@ input[type="submit"]:hover {
   font-size: 1rem;
   color: #555;
   padding: 10px;
-  background-color: #7183CB;
-  color: white;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
 }
 
 /* Small screens */
