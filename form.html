@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <meta name="description" content="this applies the principles of best practices for html forms">
+  <meta name="author" content="Joseph Almeria">
+  <link rel="stylesheet" href="styles/form-small.css">
+  <link rel="stylesheet" href="styles/form-medium.css">
+  <link rel="stylesheet" href="styles/form-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <form method="get" action="review.html" class="wf1">
+      <fieldset>
+        <label> Product Name
+          <select id="products" name="products" required>
+              <option value="" disabled selected>Select a Product...</option>
+          </select>
+       </label>
+      </fieldset>
+
+      <fieldset>
+        <div>Overall Rating</div>
+        <label><input type="radio" id="one-star" name="rating" value="one-star">&star;</label>
+        <label><input type="radio" id="two-stars" name="rating" value="two-stars">&star; &star;</label>
+        <label><input type="radio" id="three-stars" name="rating" value="three-stars">&star; &star; &star;</label>
+        <label><input type="radio" id="four-stars" name="rating" value="four-stars">&star; &star; &star; &star;</label>
+        <label><input type="radio" id="five-stars" name="rating" value="five-stars">&star; &star; &star; &star; &star;</label>
+        <div>Date of Installation</div>
+        <label><input type="date" id="completeDate" name="completeDate" required></label>
+        <div>
+          Which features did you find useful in the product?
+          <i>(Check all that apply)</i>
+        </div>
+        <label><input type="checkbox" id="durable" name="durable" value="yes">Durability</label>
+        <label><input type="checkbox" id="user-friendly" name="user-friendly" value="yes">Ease of use</label>
+        <label><input type="checkbox" id="performance" name="performance" value="yes">Performance</label>
+        <label><input type="checkbox" id="design" name="design" value="yes">Design</label>          
+      </fieldset>
+
+      <fieldset>
+          <label>
+            Written Review <p class="option">(Optional)</p>
+            <textarea id="review" name="review" rows="4" cols="50"></textarea>
+          </label>
+
+          <label>Your Name <p class="option">(Optional)</p> <input type="text" id="user-name" name="user-name"></label>
+      </fieldset>
+      <input type="submit" value="Post My Review">
+   </form>
+  </main>
+  <footer class="footer">
+        <p>©<span id="currentyear"></span> 🧙🏼‍♂️Joseph Almeria 🧙🏼‍♂️ Philippines</p>
+        <p><span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
