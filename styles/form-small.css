@@ -33,6 +33,7 @@ fieldset {
 
 .date-install, .features {
   margin-top: 2rem;
+  margin-bottom: .9rem;
 }
 
 .option {
@@ -41,6 +42,10 @@ fieldset {
   padding: 0;
   font-size: small;
   color: #7183CB;
+}
+
+i {
+  font-size: medium;
 }
 
 label {
@@ -61,8 +66,10 @@ textarea {
 }
 
 input[type="radio"], input[type="checkbox"] {
-  width: auto;
+  width: 10px; /* Adjust the width */
+  height: 10px; /* Adjust the height */
   margin-right: 5px;
+  transform: scale(1.5); /* Scale the size */
 }
 
 input[type="submit"] {
