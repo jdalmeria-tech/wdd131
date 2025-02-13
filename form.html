@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="styles/form-small.css">
   <link rel="stylesheet" href="styles/form-medium.css">
   <link rel="stylesheet" href="styles/form-large.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/form.js" defer></script>
 </head>
@@ -49,11 +52,14 @@
 
       <fieldset>
           <label>
-            Written Review<p class="option">(Optional)</p>
+            <div>Written Review <br><i>(Optional)</i></div>
             <textarea id="review" name="review" rows="4" cols="50"></textarea>
           </label>
 
-          <label>Your Name<p class="option">(Optional)</p> <input type="text" id="user-name" name="user-name"></label>
+          <label>
+            <div>Your Name <br><i>(Optional)<i></i></div> 
+            <input type="text" id="user-name" name="user-name">
+          </label>
       </fieldset>
       <input type="submit" value="Post My Review">
    </form>
