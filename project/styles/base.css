@@ -1,0 +1,147 @@
+/* Define CSS variables in the :root selector */
+:root {
+    --primary-color: #1B4080;
+    --secondary-color: #40C4C0;
+    --accent-color: #D71920;
+    --neutral-color: #F5F5F5;
+    --text-color: #333333;
+    --text-color-light: #ffffff;
+}
+
+/* Apply CSS variables */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Home Page */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-container img {
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero button {
+    margin-top: 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    font-weight: bolder;
+}
+
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+}
