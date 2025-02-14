@@ -129,6 +129,8 @@ nav a:hover {
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
+    width: auto;
+    max-width: 100%;
 }
 
 .card h3 {
