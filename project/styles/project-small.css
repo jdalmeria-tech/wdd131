@@ -28,9 +28,7 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 5px;
+    color: var(--secondary-color);
 }
 
 @media (min-width: 769px) {

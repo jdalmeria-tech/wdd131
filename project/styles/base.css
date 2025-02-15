@@ -29,6 +29,10 @@ a {
   font-family: 'Poppins', sans-serif;
 }
 
+nav a.active {
+  color: var(--secondary-color); /* Change text color to red */
+}
+
 /* Home Page */
 
 header {

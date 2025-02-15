@@ -12,6 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
   menuBtn.setAttribute('aria-expanded', 'false');
   menuBtn.setAttribute('aria-controls', 'nav-links');
   menuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+
+  // Highlight the active menu item
+  const currentPage = window.location.pathname.split('/').pop();
+  const navItems = document.querySelectorAll('#nav-links a');
+  navItems.forEach(item => {
+    if (item.getAttribute('href').includes(currentPage)) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
 });
 
 /* Add media query to hide navigation links and show burger menu button on mobile screens */
