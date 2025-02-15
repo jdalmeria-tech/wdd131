@@ -15,17 +15,19 @@
       rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img src="images/logo.webp" alt="logo of AGWWAS">
-        <h1>AGWWAS</h1>
+        <a href="index.html"><img src="images/logo.webp" alt="logo of AGWWAS"></a>
+        <h1 class="desktop-only">AGWWAS</h1>
+        <button id="menu" class="hide" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
       </div>
       <nav>
         <a href="#">Home</a>
+        <a href="#">Campaigns</a>
         <a href="#">About</a>
-        <a href="#">Services</a>
         <a href="#">Contact</a>
       </nav>
     </header>

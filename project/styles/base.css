@@ -35,7 +35,7 @@ header {
     background-color: var(--primary-color);
     color: var(--text-color-light);
     text-align: center;
-    padding: 0;
+    padding: .5rem;
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -55,6 +55,72 @@ header {
     height: 100px;
 }
 
+/* Mobile screens */
+
+.header-container h1 {
+  display: none;
+}
+
+.header-container #menu {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .header-container h1 {
+    display: block;
+  }
+  .header-container #menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container h1 {
+    display: none;
+  }
+  .header-container #menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color-light);
+    cursor: pointer;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 3rem; /* Adjusted to be below the X button */
+    right: 1rem;
+    height: auto;
+    width: 200px;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    border-radius: 10px;
+  }
+  nav.show {
+    display: flex;
+  }
+  nav a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+nav.hide {
+  display: none;
+}
+
+nav.show {
+  display: block;
+}
+
 nav {
     margin-top: 0.5rem;
 }
@@ -68,6 +134,8 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 5px;
 }
 
 .hero {
