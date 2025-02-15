@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGWWAS</title>
+    <meta
+      name="description"
+      content="this will showcase the site plan for the project of this course">
+    <meta name="author" content="Joseph Almeria">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/project-small.css">
+    <link rel="stylesheet" href="styles/project-medium.css">
+    <link rel="stylesheet" href="styles/project.large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="index.html"><img src="images/logo.webp" alt="logo of AGWWAS"></a>
+        <h1 class="desktop-only">AGWWAS</h1>
+        <button id="menu" class="hide" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
+      </div>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="campaigns-hero">
+          <h2>Our Campaigns</h2>
+          <p>AGWWAS is committed to fighting for public water rights, fair labor conditions, and sustainable water management. Explore our key advocacies below.</p>
+      </section>
+  
+      <section class="campaigns-content">
+          <div class="campaign">
+              <h3>Anti-Privatization</h3>
+              <p>Water is a fundamental human right, yet privatization threatens affordability and accessibility. AGWWAS stands against corporate control, advocating for publicly owned and managed water services that prioritize people over profits.</p>
+              <div class="campaign-images">
+                <picture>
+                  <source srcset="images/image-large1.webp" media="(min-width: 1000px)">
+                  <source srcset="images/image-medium1.webp" media="(min-width: 500px)">
+                  <img src="images/image-small1.webp" alt="Protest against water privatization" loading="lazy">
+                </picture>
+                <picture>
+                  <source srcset="images/image-large2.webp" media="(min-width: 1000px)">
+                  <source srcset="images/image-medium2.webp" media="(min-width: 500px)">
+                  <img src="images/image-small2.webp" alt="Community action against water privatization" loading="lazy">
+                </picture>
+              </div>
+          </div>
+  
+          <div class="campaign">
+              <h3>People Over Profit</h3>
+              <p>Corporate interests should not dictate access to essential resources. Our 'People Over Profit' campaign calls for policies that prioritize community well-being over private gain. We support sustainable and fair water management for all.</p>
+              <div class="campaign-images landscape">
+                <picture>
+                  <source srcset="images/image-large4.webp" media="(min-width: 1000px)">
+                  <source srcset="images/image-medium4.webp" media="(min-width: 500px)">
+                  <img src="images/image-small4.webp" alt="Community action against water privatization" loading="lazy">
+                </picture>
+                <picture>
+                  <source srcset="images/image-large5.webp" media="(min-width: 1000px)">
+                  <source srcset="images/image-medium5.webp" media="(min-width: 500px)">
+                  <img src="images/image-small5.webp" alt="Community action against water privatization" loading="lazy">
+                </picture>
+              </div>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>©<span id="currentyear"></span> AGWWAS powered by jdalmeria-tech</p>
+      <p><span id="lastModified"></span></p>
+    </footer>
+  </body>
+</html>

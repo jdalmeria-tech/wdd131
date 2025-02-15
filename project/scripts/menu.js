@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menu');
-  const navLinks = document.querySelector('nav');
+  const navLinks = document.getElementById('nav-links'); // Updated to use the new id
 
   menuBtn.addEventListener('click', () => {
     const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Add media query to hide navigation links and show burger menu button on mobile screens */
 const mediaQuery = window.matchMedia('(max-width: 768px)');
 function handleScreenChange(e) {
-  const navLinks = document.querySelector('nav');
+  const navLinks = document.getElementById('nav-links'); // Updated to use the new id
   const menuBtn = document.getElementById('menu');
   if (e.matches) {
     navLinks.classList.add('hide');

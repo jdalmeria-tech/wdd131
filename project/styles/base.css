@@ -55,89 +55,6 @@ header {
     height: 100px;
 }
 
-/* Mobile screens */
-
-.header-container h1 {
-  display: none;
-}
-
-.header-container #menu {
-  display: none;
-}
-
-@media (min-width: 769px) {
-  .header-container h1 {
-    display: block;
-  }
-  .header-container #menu {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-container h1 {
-    display: none;
-  }
-  .header-container #menu {
-    display: block;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--text-color-light);
-    cursor: pointer;
-  }
-  nav {
-    display: none;
-    position: absolute;
-    top: 3rem; /* Adjusted to be below the X button */
-    right: 1rem;
-    height: auto;
-    width: 200px;
-    background-color: var(--primary-color);
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 1rem;
-    border-radius: 10px;
-  }
-  nav.show {
-    display: flex;
-  }
-  nav a {
-    display: block;
-    padding: 1rem;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-nav.hide {
-  display: none;
-}
-
-nav.show {
-  display: block;
-}
-
-nav {
-    margin-top: 0.5rem;
-}
-
-nav a {
-    margin: 0 1rem;
-    color: var(--text-color-light);
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 5px;
-}
-
 .hero {
     background-color: var(--secondary-color);
     color: var(--text-color-light);
@@ -145,7 +62,7 @@ nav a:hover {
     padding: 2rem;
 }
 
-.hero h1 {
+.hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -206,6 +123,75 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
+
+/* Campaigns Page */
+.campaigns-hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+  }
+  
+  .campaigns-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+  }
+  
+  .campaigns-hero p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .campaigns-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .campaign {
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .campaign h3 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+  }
+  
+  .campaign p {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  .campaign-images {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .campaign-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+  }
+
+/* About Page */
+
+/* Contact Page */
+
+/* Footer */
 
 footer {
     background-color: var(--primary-color);
