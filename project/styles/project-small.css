@@ -145,16 +145,19 @@ nav a:hover {
 @media (max-width: 768px) {
   .about-image img {
       max-width: 90%;
+      box-sizing: border-box; /* Ensure border is included in the element's total width */
   }
 
   .about-history {
       padding: 1.5rem;
       max-width: 90%;
+      box-sizing: border-box; /* Ensure padding is included in the element's total width */
   }
 
   .cta {
       padding: 1.5rem;
       max-width: 90%;
+      box-sizing: border-box; /* Ensure padding is included in the element's total width */
   }
 }
 

@@ -293,6 +293,7 @@ header {
   margin: 2rem auto;
   text-align: center;
   padding: 0 1rem;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .about-image {
@@ -308,6 +309,7 @@ header {
   border-radius: 10px;
   object-fit: cover;
   border: 3px solid var(--primary-color);
+  box-sizing: border-box; /* Ensure border is included in the element's total width */
 }
 
 /* History Section */
@@ -319,6 +321,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 840px;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
 }
 
 .about-history h3 {
