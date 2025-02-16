@@ -41,6 +41,10 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 5rem;
+  }
+
   .header-container h1 {
     display: none;
   }
