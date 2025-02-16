@@ -18,7 +18,7 @@
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/menu.js" defer></script>
   </head>
-  <body>
+  <body data-filter="home">
     <header>
       <div class="header-container">
         <a href="index.html"><img src="images/logo.webp" alt="logo of AGWWAS"></a>
@@ -26,15 +26,15 @@
         <button id="menu" class="hide" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
       </div>
       <nav id="nav-links">
-        <a href="index.html" class="active" title="Home">Home</a>
-        <a href="campaigns.html" title="Campaigns">Campaigns</a>
-        <a href="about.html" title="About">About</a>
-        <a href="contact.html" title="Contact">Contact</a>
+        <a href="index.html" class="active" title="Home" data-filter="home">Home</a>
+        <a href="campaigns.html" title="Campaigns" data-filter="campaign">Campaigns</a>
+        <a href="about.html" title="About" data-filter="about">About</a>
+        <a href="contact.html" title="Contact" data-filter="contact">Contact</a>
       </nav>
     </header>
     <main>
       <section class="hero">
-        <h2>Alliance of Government Workers in the Water Sector</h2>
+        <h2 id="pageTitle">Alliance of Government Workers in the Water Sector</h2>
         <p>Championing Water Workers’ Rights & Public Services</p>
         <button onclick="location.href='about.html'">Learn More</button>
       </section>

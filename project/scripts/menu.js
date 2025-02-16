@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   highlightActiveMenuItem();
+
+  const filter = document.body.getAttribute('data-filter');
+  updatePageTitle(filter);
 });
 
 const handleScreenChange = (e) => {
@@ -43,5 +46,23 @@ const handleScreenChange = (e) => {
 };
 
 const mediaQuery = window.matchMedia('(max-width: 768px)');
-mediaQuery.addListener(handleScreenChange);
+mediaQuery.addEventListener(handleScreenChange);
 handleScreenChange(mediaQuery);
+
+// this changes the active class, helps users know which page they are in
+function updatePageTitle(filter) {
+  const pageTitle = document.getElementById('pageTitle');
+  switch (filter) {
+    case 'campaign':
+      pageTitle.textContent = 'Our Campaigns';
+      break;
+    case 'about':
+      pageTitle.textContent = 'About Us';
+      break;
+    case 'contact':
+      pageTitle.textContent = 'Contact Us';
+      break;
+    default:
+      pageTitle.textContent = 'Alliance of Government Workers in the Water Sector';
+  }
+}

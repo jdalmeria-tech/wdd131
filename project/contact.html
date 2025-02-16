@@ -19,7 +19,7 @@
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/contact.js" defer></script>
   </head>
-  <body>
+  <body data-filter="contact">
     <header>
       <div class="header-container">
         <a href="index.html"><img src="images/logo.webp" alt="logo of AGWWAS"></a>
@@ -27,20 +27,20 @@
         <button id="menu" class="hide" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
       </div>
       <nav id="nav-links">
-        <a href="index.html" class="active" title="Home">Home</a>
-        <a href="campaigns.html" title="Campaigns">Campaigns</a>
-        <a href="about.html" title="About">About</a>
-        <a href="contact.html" title="Contact">Contact</a>
+        <a href="index.html" class="active" title="Home" data-filter="home">Home</a>
+        <a href="campaigns.html" title="Campaigns" data-filter="campaign">Campaigns</a>
+        <a href="about.html" title="About" data-filter="about">About</a>
+        <a href="contact.html" title="Contact" data-filter="contact">Contact</a>
       </nav>
     </header>
     <main>
       <section class="contact-hero">
-          <h2>Contact AGWWAS</h2>
+          <h2 id="pageTitle"></h2>
           <p>Get in touch with us for inquiries, collaboration, or support. We’d love to hear from you!</p>
       </section>
   
       <section class="contact-form">
-          <h3>Send Us a Message</h3>
+          <h3>We'd love to hear from you!</h3>
           <form action="confirmation.html" method="get" class="wf1">
               <fieldset>
                   <label for="name">Your Name (Required)
