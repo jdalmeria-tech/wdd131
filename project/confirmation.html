@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/project-small.css">
     <link rel="stylesheet" href="styles/project-medium.css">
     <link rel="stylesheet" href="styles/project.large.css">
+    <script src="scripts/contact.js" defer></script> 
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/menu.js" defer></script>
   </head>
@@ -27,15 +28,23 @@
         <h1 class="desktop-only">AGWWAS</h1>
         <button id="menu" class="hide" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
       </div>
-      <nav id="nav-links">
-        <a href="index.html" class="active" title="Home">Home</a>
-        <a href="campaigns.html" title="Campaigns">Campaigns</a>
-        <a href="about.html" title="About">About</a>
-        <a href="contact.html" title="Contact">Contact</a>
-      </nav>
     </header>
     <main>
-      <h1>Do this later...</h1>
+      <div class="confirmation-container">
+        <h2>Message Sent Successfully! ✅</h2>
+        <p>Thank you, <span id="confirm-name"></span>, for reaching out! Here are the details of your message:</p>
+    
+        <div class="confirmation-details">
+            <p><strong>Name:</strong> <span id="confirm-name-span"></span></p>
+            <p><strong>Email:</strong> <span id="confirm-email"></span></p>
+            <p><strong>Subject:</strong> <span id="confirm-subject"></span></p>
+            <p><strong>Forms Submitted:</strong> <span id="confirm-forms"></span></p>
+            <p><strong>Message:</strong></p>
+            <p id="confirm-message"></p>
+        </div>
+    
+        <a href="index.html" class="cta-button">Back to Home</a>
+      </div>
     </main>
     <footer class="footer">
       <p>©<span id="currentyear"></span> AGWWAS powered by jdalmeria-tech</p>
