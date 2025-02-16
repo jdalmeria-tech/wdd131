@@ -1,8 +1,9 @@
-const year = document.querySelector("#currentyear");
-const lastModified = document.querySelector("#lastModified");
+document.addEventListener('DOMContentLoaded', () => {
+  const year = document.querySelector("#currentyear");
+  const lastModified = document.querySelector("#lastModified");
 
-const date = new Date();
+  const date = new Date();
 
-year.innerHTML = date.getFullYear();
-
-lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
+  year.textContent = date.getFullYear();
+  lastModified.textContent = `Last Modified: ${document.lastModified}`;
+});
