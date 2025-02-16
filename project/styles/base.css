@@ -214,7 +214,7 @@ header {
   font-weight: bold;
   padding: 0.75rem 1.5rem;
   border-radius: 10px;
-  border: var(--text-color-light) 2px solid;
+  border: var(--text-color-light) 5px solid;
   text-decoration: none;
   transition: background-color 0.3s;
   margin-top: 1rem;
@@ -222,7 +222,7 @@ header {
 
 .cta-button:hover {
   background-color: white;
-  border: var(--accent-color) 2px solid;
+  border: var(--accent-color) 5px solid;
   color: var(--accent-color);
 }
 
@@ -293,7 +293,98 @@ header {
   color: var(--text-color);
 }
 
-/* Contact Page */
+/* Contact Hero Section */
+.contact-hero {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  padding: 2rem;
+}
+
+.contact-hero h2 {
+  font-size: 2.5rem;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form fieldset {
+  border: none;
+  margin-bottom: 1.2rem;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%; /* Set the desired width */
+  max-width: 500px; /* Optional: Maximum width */
+  margin: 0 auto; /* Center the labels */
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: .9rem;
+  text-align: left; /* Center the text within the labels */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="subject"],
+.contact-form textarea {
+  display: block;
+  width: 100%; /* Set the desired width */
+  max-width: 500px; /* Optional: Maximum width */
+  margin: 0 auto; /* Center the input fields */
+  margin-top: .5rem;
+  padding: 0.75rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  display: block;
+  width: 80%; /* Set the desired width */
+  max-width: 500px; /* Optional: Maximum width */
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: var(--accent-color) 5px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1rem auto; /* Center the button */
+}
+
+.contact-submit:hover {
+  background-color: var(--text-color-light);
+  color: var(--accent-color);
+}
 
 /* Footer */
 

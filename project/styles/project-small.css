@@ -143,3 +143,11 @@ nav a:hover {
       max-width: 90%;
   }
 }
+
+/* Contact page */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 1.5rem;
+  }
+}
