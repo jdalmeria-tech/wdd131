@@ -264,7 +264,7 @@ header {
 .cta-button:hover {
   background-color: white;
   border: var(--accent-color) 5px solid;
-  color: var (--accent-color);
+  color: var(--accent-color);
 }
 
 /* About Page */
