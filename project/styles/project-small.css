@@ -109,14 +109,14 @@ nav a:hover {
   }
 
   .campaign-images img {
-      max-width: 90%; /* Adjust image size for small screens */
-      margin-bottom: 1rem; /* Add margin between images */
+      max-width: 90%; 
+      margin-bottom: 1rem;
   }
 
   .campaign {
-    width: 90%; /* Adjust card size for small screens */
-    margin: 0 auto; /* Center the card */
-    margin-bottom: 1rem; /* Add margin between cards */
+    width: 90%;
+    margin: 0 auto; 
+    margin-bottom: 1rem;
   }
 }
 
@@ -143,21 +143,30 @@ nav a:hover {
 /* About page */
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-content {
+      padding: 1.5rem;
+      max-width: 90%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the content horizontally */
+  }
+
   .about-image img {
       max-width: 90%;
-      box-sizing: border-box; /* Ensure border is included in the element's total width */
+      box-sizing: border-box;
   }
 
   .about-history {
       padding: 1.5rem;
       max-width: 90%;
-      box-sizing: border-box; /* Ensure padding is included in the element's total width */
+      box-sizing: border-box;
   }
 
   .cta {
       padding: 1.5rem;
       max-width: 90%;
-      box-sizing: border-box; /* Ensure padding is included in the element's total width */
+      box-sizing: border-box;
   }
 }
 
