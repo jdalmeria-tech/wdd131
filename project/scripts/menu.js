@@ -46,7 +46,7 @@ const handleScreenChange = (e) => {
 };
 
 const mediaQuery = window.matchMedia('(max-width: 768px)');
-mediaQuery.addEventListener(handleScreenChange);
+mediaQuery.addEventListener('change',handleScreenChange);
 handleScreenChange(mediaQuery);
 
 // this changes the active class, helps users know which page they are in
