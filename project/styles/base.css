@@ -199,6 +199,39 @@ header {
   border: 2px solid var(--primary-color);
 }
 
+/* Table Styles */
+#campaigns-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#campaigns-table th, #campaigns-table td {
+  border: 1px solid var(--secondary-color);
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#campaigns-table th {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  font-weight: bold;
+}
+
+#campaigns-table tr:nth-child(even) {
+  background-color: var(--neutral-color);
+}
+
+#campaigns-table tr:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+}
+
 /* call to action */
 .campaign:last-of-type {
   text-align: center; /* Center align all content */

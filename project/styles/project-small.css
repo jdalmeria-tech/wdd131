@@ -87,6 +87,14 @@ nav a:hover {
 
 /* Campaign Page */
 
+/* Responsive Table */
+@media (max-width: 768px) {
+  #campaigns-table th, #campaigns-table td {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+}
+
 /* Landscape images (People Over Profit) */
 .campaign-images.landscape img {
   width: 100%;
