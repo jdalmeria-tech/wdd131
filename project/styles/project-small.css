@@ -125,3 +125,21 @@ nav a:hover {
   margin-top: 1rem;
   flex-wrap: nowrap; /* Ensure images are on the same line */
 }
+
+/* About page */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-image img {
+      max-width: 90%;
+  }
+
+  .about-history {
+      padding: 1.5rem;
+      max-width: 90%;
+  }
+
+  .cta {
+      padding: 1.5rem;
+      max-width: 90%;
+  }
+}
